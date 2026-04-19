@@ -1,3 +1,4 @@
+import 'package:assignment/config/theme/app_color.dart';
 import 'package:flutter/material.dart';
 
 class ProductCard extends StatelessWidget {
@@ -52,8 +53,8 @@ class ProductCard extends StatelessWidget {
                       textAlign: TextAlign.center,
                       style: const TextStyle(
                         fontSize: 11,
-                        fontWeight: FontWeight.w600,
-                        color: Color(0xFF0F9687),
+                        fontWeight: FontWeight.w400,
+                        color:AppColor.tealColor,
                       ),
                     ),
                   ),

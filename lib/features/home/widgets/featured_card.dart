@@ -60,8 +60,8 @@ class FeaturedCard extends StatelessWidget {
                     'Featured $title',
                     style: const TextStyle(
                       fontSize: 12,
-                      fontWeight: FontWeight.w900, 
-                      color: Color(0xFF1F2A3A),
+                      fontWeight: FontWeight.w500, 
+                      color: Colors.black,
                     ),
                   ),
                 ),
@@ -85,7 +85,7 @@ class FeaturedCard extends StatelessWidget {
                     child: const Text(
                       'Featured', 
                       style: TextStyle(
-                        color: Color(0xFFFF3B3B),
+                        color: Colors.redAccent,
                         fontSize: 11, 
                         fontWeight: FontWeight.bold,
                       ),
@@ -113,9 +113,9 @@ class FeaturedCard extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min, 
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: const [
-                        Icon(Icons.star, size: 14, color: Color(0xFFFFC107)),
+                        Icon(Icons.star, size: 14, color: Colors.amber),
                         SizedBox(width: 4),
-                        Icon(Icons.star, size: 14, color: Color(0xFFFFC107)),
+                        Icon(Icons.star, size: 14, color: Colors.amber),
                       ],
                     ),
                   ),
