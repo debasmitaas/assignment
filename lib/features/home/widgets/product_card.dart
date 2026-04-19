@@ -52,8 +52,8 @@ class ProductCard extends StatelessWidget {
                       title,
                       textAlign: TextAlign.center,
                       style: const TextStyle(
-                        fontSize: 11,
-                        fontWeight: FontWeight.w400,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w500,
                         color:AppColor.tealColor,
                       ),
                     ),

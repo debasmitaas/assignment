@@ -1,5 +1,6 @@
 import 'package:assignment/config/assets/app_vectors.dart';
 import 'package:assignment/config/theme/app_color.dart';
+import 'package:assignment/config/theme/app_text_styles.dart';
 import 'package:assignment/core/extensions/extension_methods.dart';
 import 'package:assignment/features/otp_verification/pages/enter_mobile.dart';
 import 'package:flutter/material.dart';
@@ -89,13 +90,9 @@ class _OtpButton extends StatelessWidget {
           ),
         ),
         icon: const Icon(Icons.phone, size: 20),
-        label: const Text(
+        label:  Text(
           'Continue with OTP',
-          style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w600,
-            letterSpacing: 0.3,
-          ),
+          style: AppTextStyles.interText.copyWith(color: Colors.white),
         ),
       ),
     );
@@ -127,14 +124,9 @@ class _GoogleButton extends StatelessWidget {
           children: [
             _GoogleGIcon(),
             const SizedBox(width: 10),
-            const Text(
+            Text(
               'Continue with Google',
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w600,
-                color: Colors.black87,
-                letterSpacing: 0.3,
-              ),
+              style:AppTextStyles.interText
             ),
           ],
         ),
@@ -163,6 +155,7 @@ class _DisclaimerText extends StatelessWidget {
           fontSize: 11,
           color: AppColor.textColor,
           height: 1.5,
+          fontFamily: 'Inter',
         ),
         children: [
           const TextSpan(text: 'By continuing you agree to our '),
@@ -180,7 +173,8 @@ class _DisclaimerText extends StatelessWidget {
             style: const TextStyle(
               decoration: TextDecoration.underline,
               color: AppColor.textColor,
-              fontWeight: FontWeight.w600,
+              fontWeight: FontWeight.w700,
+              fontFamily: 'Inter',
             ),
           ),
           const TextSpan(

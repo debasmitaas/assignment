@@ -1,3 +1,4 @@
+import 'package:assignment/config/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class FeaturedCard extends StatelessWidget {
@@ -58,11 +59,7 @@ class FeaturedCard extends StatelessWidget {
                   fit: BoxFit.scaleDown,
                   child: Text(
                     'Featured $title',
-                    style: const TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w500, 
-                      color: Colors.black,
-                    ),
+                    style:AppTextStyles.cardText
                   ),
                 ),
               ),

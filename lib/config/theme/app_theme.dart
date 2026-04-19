@@ -1,3 +1,4 @@
+import 'package:assignment/config/theme/app_color.dart';
 import 'package:flutter/material.dart';
 
 class AppTheme {
@@ -5,6 +6,9 @@ class AppTheme {
     return ThemeData(
       fontFamily: 'Poppins',
       scaffoldBackgroundColor: Colors.white,
+      textSelectionTheme: TextSelectionThemeData(
+        cursorColor: AppColor.tealColor,
+      ),
       appBarTheme: const AppBarTheme(
         backgroundColor: Colors.white,
         elevation: 0,

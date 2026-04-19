@@ -1,6 +1,7 @@
 import 'package:assignment/config/assets/app_images.dart';
 import 'package:assignment/config/assets/app_vectors.dart';
 import 'package:assignment/config/theme/app_color.dart';
+import 'package:assignment/config/theme/app_text_styles.dart';
 import 'package:assignment/features/home/widgets/category_card.dart';
 import 'package:assignment/features/home/widgets/featured_card.dart';
 import 'package:assignment/features/home/widgets/product_card.dart';
@@ -93,8 +94,7 @@ class HomePage extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(16, 24, 16, 12),
       child: Text(
         title,
-        style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.black87),
-      ),
+        style: AppTextStyles.title2),
     );
   }
 

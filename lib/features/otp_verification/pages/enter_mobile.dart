@@ -1,4 +1,5 @@
 import 'package:assignment/config/theme/app_color.dart';
+import 'package:assignment/config/theme/app_text_styles.dart';
 import 'package:assignment/features/otp_verification/pages/otp_verification.dart';
 import 'package:assignment/features/otp_verification/widgets/primary_button.dart';
 import 'package:flutter/material.dart';
@@ -34,24 +35,14 @@ class EnterMobile extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 16),
-              const Text(
+              Text(
                 'Enter Your Mobile Number',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.w700,
-                  color: Colors.black,
-                  letterSpacing: -0.5,
-                ),
+                style: AppTextStyles.title1
               ),
               const SizedBox(height: 12),
-              const Text(
+              Text(
                 "Lets create or find your account. We'll send you a security code to verify that its really you.",
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w400,
-                  color: AppColor.greyColor,
-                  height: 1.5,
-                ),
+                style:AppTextStyles.subtitleText,
               ),
               const SizedBox(height: 32),
               Row(

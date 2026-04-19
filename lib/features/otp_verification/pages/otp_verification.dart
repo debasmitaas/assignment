@@ -1,4 +1,5 @@
 import 'package:assignment/config/theme/app_color.dart';
+import 'package:assignment/config/theme/app_text_styles.dart';
 import 'package:assignment/features/home/pages/home.dart';
 import 'package:assignment/features/otp_verification/widgets/primary_button.dart';
 import 'package:flutter/material.dart';
@@ -56,26 +57,16 @@ class OtpVerification extends StatelessWidget {
               const SizedBox(height: 16),
               
               // Title 
-              const Text(
+              Text(
                 'We just sent you an SMS',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.w700,
-                  color: Colors.black,
-                  letterSpacing: -0.5,
-                ),
+                style: AppTextStyles.title1
               ),
               const SizedBox(height: 12),
               
               // Subtitle 
               Text(
                 'Enter the security code we sent to\n$phoneNumber',
-                style: const TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w400,
-                  color: AppColor.greyColor,
-                  height: 1.5,
-                ),
+                style: AppTextStyles.subtitleText
               ),
               const SizedBox(height: 32),
 

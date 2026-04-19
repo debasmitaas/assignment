@@ -1,3 +1,4 @@
+import 'package:assignment/config/theme/app_text_styles.dart';
 import 'package:assignment/core/extensions/extension_methods.dart';
 import 'package:flutter/material.dart';
 
@@ -55,11 +56,7 @@ class CategoryCard extends StatelessWidget {
                 child: Center(
                   child: Text(
                     title,
-                    style: const TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.black87,
-                    ),
+                    style: AppTextStyles.cardText,
                   ),
                 ),
               ),
