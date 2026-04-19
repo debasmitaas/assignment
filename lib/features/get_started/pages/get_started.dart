@@ -81,7 +81,7 @@ class _OtpButton extends StatelessWidget {
       child: ElevatedButton.icon(
         onPressed: onTap,
         style: ElevatedButton.styleFrom(
-          backgroundColor: const Color(0xFF0A6B60), // dark teal
+          backgroundColor: AppColor.tealColor, // dark teal
           foregroundColor: Colors.white,
           elevation: 0,
           shape: RoundedRectangleBorder(
@@ -116,7 +116,7 @@ class _GoogleButton extends StatelessWidget {
         onPressed: onTap,
         style: OutlinedButton.styleFrom(
           backgroundColor: Colors.white,
-          side: const BorderSide(color: Color(0xFF176272), width: 1.5),
+          side: const BorderSide(color:AppColor.darkGreenBorderColor, width: 1.5),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),
           ),
@@ -161,7 +161,7 @@ class _DisclaimerText extends StatelessWidget {
       text: TextSpan(
         style: const TextStyle(
           fontSize: 11,
-          color: Color(0xFF1F2A3A),
+          color: AppColor.textColor,
           height: 1.5,
         ),
         children: [
@@ -170,7 +170,7 @@ class _DisclaimerText extends StatelessWidget {
             text: 'Terms & Conditions',
             style: const TextStyle(
               decoration: TextDecoration.underline,
-              color: Color(0xFF1F2A3A),
+              color: AppColor.textColor,
               fontWeight: FontWeight.w600,
             ),
           ),
@@ -179,7 +179,7 @@ class _DisclaimerText extends StatelessWidget {
             text: 'Privacy Policy',
             style: const TextStyle(
               decoration: TextDecoration.underline,
-              color: Color(0xFF1F2A3A),
+              color: AppColor.textColor,
               fontWeight: FontWeight.w600,
             ),
           ),

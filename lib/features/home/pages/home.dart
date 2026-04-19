@@ -1,5 +1,6 @@
 import 'package:assignment/config/assets/app_images.dart';
 import 'package:assignment/config/assets/app_vectors.dart';
+import 'package:assignment/config/theme/app_color.dart';
 import 'package:assignment/features/home/widgets/category_card.dart';
 import 'package:assignment/features/home/widgets/featured_card.dart';
 import 'package:assignment/features/home/widgets/product_card.dart';
@@ -15,7 +16,6 @@ class HomePage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: CustomScrollView(
         slivers: [
-          // Pass context so the header can calculate the notch height!
           _buildHeader(context),
           SliverToBoxAdapter(
             child: Column(
@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
               children: [
                 const SizedBox(height: 16),
                 
-                // --- Banner Area ---
+                //  Banner Area 
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: AspectRatio(
@@ -35,22 +35,22 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 
-                // --- Categories ---
+                // Categories 
                 _buildSectionTitle('Categories'),
                 SizedBox(
                   height: 100,
                   child: ListView.builder(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
                     scrollDirection: Axis.horizontal,
-                    itemCount: 5, // Replace with actual data length
+                    itemCount: 5, 
                     itemBuilder: (context, index) => CategoryCard(
                       title: 'Example', 
-                      imagePath: AppImages.demoitem, // Passed here
+                      imagePath: AppImages.demoitem, 
                     ),
                   ),
                 ),
 
-                // --- Featured Products ---
+                //Featured Products
                 _buildSectionTitle('Featured Products'),
                 SizedBox(
                   height: 130,
@@ -65,15 +65,15 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
 
-                // --- Grocery & Kitchen Grid ---
+                // Grocery & Kitchen Grid
                 _buildSectionTitle('Grocery & Kitchen'),
-                _buildProductGrid(6), // Pass actual list of data here
+                _buildProductGrid(6), 
 
-                // --- Snacks & Drinks Grid ---
+                // Snacks & Drinks Grid 
                 _buildSectionTitle('Snacks & Drinks'),
                 _buildProductGrid(6),
 
-                // --- Beauty & Hygiene Grid ---
+                //Beauty & Hygiene Grid
                 _buildSectionTitle('Beauty & Hygiene'),
                 _buildProductGrid(6),
 
@@ -86,7 +86,7 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  // ── Helper Variables & Methods ──────────────────────────────────────
+  // Helper Variables & Methods 
 
   Widget _buildSectionTitle(String title) {
     return Padding(
@@ -101,8 +101,8 @@ class HomePage extends StatelessWidget {
   Widget _buildProductGrid(int itemCount) {
     return GridView.builder(
       padding: const EdgeInsets.symmetric(horizontal: 16),
-      physics: const NeverScrollableScrollPhysics(), // Important: disables inner scrolling
-      shrinkWrap: true,                              // Makes grid take only needed space
+      physics: const NeverScrollableScrollPhysics(), 
+      shrinkWrap: true,                              
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 3,
         crossAxisSpacing: 12,
@@ -112,40 +112,39 @@ class HomePage extends StatelessWidget {
       itemCount: itemCount,
       itemBuilder: (context, index) => ProductCard(
         title: 'Example', 
-        imagePath: AppImages.demoitem, // Passed here
+        imagePath: AppImages.demoitem,
       ),
     );
   }
 
   SliverAppBar _buildHeader(BuildContext context) {
     return SliverAppBar(
-      automaticallyImplyLeading: false, // Prevents Flutter from injecting the back arrow
-      expandedHeight: 150, // Bumped slightly to give breathing room above search bar
+      automaticallyImplyLeading: false, 
+      expandedHeight: 150, 
       pinned: true,
       elevation: 0,
-      backgroundColor: const Color(0xFF0F9687),
+      backgroundColor: AppColor.tealColor,
       flexibleSpace: FlexibleSpaceBar(
         background: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              colors: [Color(0xFF0F9687), Color(0xFFE0F2F1)],
+              colors: [AppColor.tealColor, Colors.white],
             ),
           ),
           child: Padding(
             padding: EdgeInsets.only(
-              top: MediaQuery.of(context).padding.top + 12, // Respect notch explicitly
+              top: MediaQuery.of(context).padding.top + 12, 
               left: 16.0,
               right: 16.0,
             ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start, // Align top, NOT center
+              mainAxisAlignment: MainAxisAlignment.start, 
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    // Ensure the SVG always has a constraint so it doesn't vanish
                     SvgPicture.asset(
                       AppVectors.homepagelogo,
                       height: 24, 
@@ -183,9 +182,9 @@ class HomePage extends StatelessWidget {
             child: const TextField(
               decoration: InputDecoration(
                 hintText: 'Search for groceries...',
-                hintStyle: TextStyle(fontSize: 14, color: Colors.grey),
-                prefixIcon: Icon(Icons.search, color: Colors.grey),
-                suffixIcon: Icon(Icons.mic, color: Colors.grey),
+                hintStyle: TextStyle(fontSize: 14, color: AppColor.greyColor ),
+                prefixIcon: Icon(Icons.search, color: Colors.black),
+                suffixIcon: Icon(Icons.mic, color: Colors.black),
                 border: InputBorder.none,
                 contentPadding: EdgeInsets.symmetric(vertical: 12),
               ),

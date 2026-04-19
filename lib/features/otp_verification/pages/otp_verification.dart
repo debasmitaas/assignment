@@ -1,3 +1,4 @@
+import 'package:assignment/config/theme/app_color.dart';
 import 'package:assignment/features/home/pages/home.dart';
 import 'package:assignment/features/otp_verification/widgets/primary_button.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +31,7 @@ class OtpVerification extends StatelessWidget {
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF0F9687),
+                  color: AppColor.tealColor,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: const Text(
@@ -60,7 +61,7 @@ class OtpVerification extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.w700,
-                  color: Color(0xFF0F172A),
+                  color: Colors.black,
                   letterSpacing: -0.5,
                 ),
               ),
@@ -72,7 +73,7 @@ class OtpVerification extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w400,
-                  color: Color(0xFF64748B),
+                  color: AppColor.greyColor,
                   height: 1.5,
                 ),
               ),
@@ -89,7 +90,7 @@ class OtpVerification extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.w500,
-                  color: Color(0xFF334155),
+                  color: AppColor.darkGreyColor,
                 ),
               ),
 
@@ -143,17 +144,17 @@ class _OtpInputRow extends StatelessWidget {
               style: const TextStyle(
                 fontSize: 20, 
                 fontWeight: FontWeight.w600,
-                color: Color(0xFF0F172A),
+                color: Colors.black,
               ),
               decoration: InputDecoration(
                 contentPadding: EdgeInsets.zero,
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
-                  borderSide: const BorderSide(color: Color(0xFF7CB8B8), width: 1.0),
+                  borderSide: const BorderSide(color: AppColor.bluetealColor, width: 1.0),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
-                  borderSide: const BorderSide(color: Color(0xFF0F9687), width: 1.5),
+                  borderSide: const BorderSide(color: AppColor.darkGreenBorderColor, width: 1.5),
                 ),
               ),
             ),

@@ -1,3 +1,4 @@
+import 'package:assignment/config/theme/app_text_styles.dart';
 import 'package:assignment/features/splash/pages/splash_page.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +12,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: const SplashPage());
+    return MaterialApp(home: const SplashPage(),theme: AppTheme.lightTheme,);
   }
 }
