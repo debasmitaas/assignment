@@ -1,6 +1,8 @@
+import 'package:assignment/features/splash/pages/splash_page.dart';
 import 'package:flutter/material.dart';
 
-void main() async{
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -9,9 +11,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: const Scaffold(),
-    );
+    return MaterialApp(home: const SplashPage());
   }
 }
-
