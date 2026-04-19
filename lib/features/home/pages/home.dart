@@ -159,11 +159,11 @@ class HomePage extends StatelessWidget {
                 const SizedBox(height: 8),
                 Row(
                   children: const [
-                    Icon(Icons.location_on, color: Colors.black, size: 14),
+                    Icon(Icons.location_on, color: Colors.black, size: 16),
                     SizedBox(width: 4),
                     Text(
                       'E-107 Golf links, Delhi • 16 min', 
-                      style: TextStyle(color: Colors.black87, fontSize: 12, fontWeight: FontWeight.w500),
+                      style: TextStyle(color: Colors.black87, fontSize: 16, fontWeight: FontWeight.w500),
                     ),
                   ],
                 ),
@@ -180,13 +180,14 @@ class HomePage extends StatelessWidget {
             height: 45,
             decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(8)),
             child: const TextField(
+              textAlignVertical: TextAlignVertical.center,
               decoration: InputDecoration(
                 hintText: 'Search for groceries...',
                 hintStyle: TextStyle(fontSize: 14, color: AppColor.greyColor ),
                 prefixIcon: Icon(Icons.search, color: Colors.black),
                 suffixIcon: Icon(Icons.mic, color: Colors.black),
                 border: InputBorder.none,
-                contentPadding: EdgeInsets.symmetric(vertical: 12),
+                contentPadding: EdgeInsets.zero,
               ),
             ),
           ),
