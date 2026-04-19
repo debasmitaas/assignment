@@ -1,6 +1,7 @@
 import 'package:assignment/config/assets/app_vectors.dart';
 import 'package:assignment/config/theme/app_color.dart';
 import 'package:assignment/core/extensions/extension_methods.dart';
+import 'package:assignment/features/otp_verification/pages/enter_mobile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -17,38 +18,27 @@ class GetStarted extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [
-              AppColor.tealColor,
-              Colors.white,
-            ],
+            colors: [AppColor.tealColor, Colors.white],
           ),
         ),
         child: SafeArea(
           child: Column(
             children: [
-              // ── Logo area ──────────────────────────────────────────
-              const Expanded(
-                child: Center(
-                  child: _Root5Logo(),
-                ),
-              ),
-
-              // ── Buttons + disclaimer ───────────────────────────────
+              const Expanded(child: Center(child: _Root5Logo())),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 28.0),
                 child: Column(
                   children: [
-                    // Continue with OTP
-                    _OtpButton(onTap: () {}),
+                    _OtpButton(onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> const EnterMobile()));
+                    }),
 
                     const SizedBox(height: 14),
 
-                    // Continue with Google
                     _GoogleButton(onTap: () {}),
 
                     const SizedBox(height: 20),
 
-                    // Disclaimer text
                     const _DisclaimerText(),
 
                     const SizedBox(height: 32),
@@ -69,11 +59,15 @@ class _Root5Logo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SvgPicture.asset(AppVectors.welcomelogo, width: context.getResponsiveWidth(245), height: context.getResponsiveHeight(82.2),);
+    return SvgPicture.asset(
+      AppVectors.welcomelogo,
+      width: context.getResponsiveWidth(245),
+      height: context.getResponsiveHeight(82.2),
+    );
   }
 }
 
-// OTP Button  
+// OTP Button
 
 class _OtpButton extends StatelessWidget {
   const _OtpButton({required this.onTap});
@@ -87,7 +81,7 @@ class _OtpButton extends StatelessWidget {
       child: ElevatedButton.icon(
         onPressed: onTap,
         style: ElevatedButton.styleFrom(
-          backgroundColor: const Color(0xFF0A6B60),   // dark teal
+          backgroundColor: const Color(0xFF0A6B60), // dark teal
           foregroundColor: Colors.white,
           elevation: 0,
           shape: RoundedRectangleBorder(
@@ -148,13 +142,13 @@ class _GoogleButton extends StatelessWidget {
     );
   }
 }
+
 class _GoogleGIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SvgPicture.asset(AppVectors.devicongoogle);
   }
 }
-
 
 // Disclaimer Text
 class _DisclaimerText extends StatelessWidget {
