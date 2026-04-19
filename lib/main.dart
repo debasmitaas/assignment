@@ -1,4 +1,4 @@
-import 'package:assignment/config/theme/app_text_styles.dart';
+import 'package:assignment/config/theme/app_theme.dart';
 import 'package:assignment/features/splash/pages/splash_page.dart';
 import 'package:flutter/material.dart';
 
