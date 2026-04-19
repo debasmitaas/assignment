@@ -1,3 +1,4 @@
+import 'package:assignment/features/home/pages/home.dart';
 import 'package:assignment/features/otp_verification/widgets/primary_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -99,7 +100,7 @@ class OtpVerification extends StatelessWidget {
                 child: PrimaryButton(
                   text: 'Verify',
                   onPressed: () {
-                    
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> const HomePage()));
                   },
                 ),
               ),
